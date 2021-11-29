@@ -17,5 +17,9 @@ namespace ShopPhone
             InitializeComponent();
         }
 
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

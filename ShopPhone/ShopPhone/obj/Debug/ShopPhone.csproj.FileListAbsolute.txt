@@ -9,3 +9,5 @@ D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.csproj.GenerateRe
 D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.csproj.CoreCompileInputs.cache
 D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.exe
 D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.pdb
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.View.Customer.resources
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.View.Employee.resources
