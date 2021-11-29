@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ShopPhone
+namespace ShopPhone.View
 {
-    public partial class Form1 : Form
+    public partial class Customer : Form
     {
-        public Form1()
+        public Customer()
         {
             InitializeComponent();
         }

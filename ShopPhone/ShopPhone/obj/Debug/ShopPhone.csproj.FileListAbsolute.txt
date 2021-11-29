@@ -1,0 +1,11 @@
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\bin\Debug\ShopPhone.exe.config
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\bin\Debug\ShopPhone.exe
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\bin\Debug\ShopPhone.pdb
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.csproj.AssemblyReference.cache
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.HomePage.resources
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.Login.resources
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.Properties.Resources.resources
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.csproj.GenerateResource.cache
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.csproj.CoreCompileInputs.cache
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.exe
+D:\IT\XML\ShopPhoneXML\ShopPhone\ShopPhone\obj\Debug\ShopPhone.pdb
