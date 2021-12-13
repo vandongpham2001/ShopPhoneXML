@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopPhone.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,19 @@ namespace ShopPhone
         private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnNV_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            employee.Show();
+
+        }
+
+        private void btnKH_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+            customer.Show();
         }
     }
 }

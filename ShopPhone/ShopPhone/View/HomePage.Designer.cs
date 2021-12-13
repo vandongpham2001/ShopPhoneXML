@@ -33,7 +33,6 @@ namespace ShopPhone
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đổiMậtKhẩuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoátToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýNhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +48,11 @@ namespace ShopPhone
             this.chuyểnĐổiDữLiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sQLXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xMLSQLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnKH = new System.Windows.Forms.Button();
+            this.btnBanHang = new System.Windows.Forms.Button();
+            this.btnNV = new System.Windows.Forms.Button();
+            this.btnDonHang = new System.Windows.Forms.Button();
+            this.btnThongKe = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +69,7 @@ namespace ShopPhone
             this.chuyểnĐổiDữLiệuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(868, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(880, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -79,7 +83,6 @@ namespace ShopPhone
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.đổiMậtKhẩuToolStripMenuItem,
-            this.đăngNhậpToolStripMenuItem,
             this.đăngXuấtToolStripMenuItem,
             this.thoátToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
@@ -89,25 +92,19 @@ namespace ShopPhone
             // đổiMậtKhẩuToolStripMenuItem
             // 
             this.đổiMậtKhẩuToolStripMenuItem.Name = "đổiMậtKhẩuToolStripMenuItem";
-            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đổiMậtKhẩuToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.đổiMậtKhẩuToolStripMenuItem.Text = "Đổi mật khẩu";
-            // 
-            // đăngNhậpToolStripMenuItem
-            // 
-            this.đăngNhậpToolStripMenuItem.Name = "đăngNhậpToolStripMenuItem";
-            this.đăngNhậpToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.đăngNhậpToolStripMenuItem.Text = "Đăng nhập";
             // 
             // đăngXuấtToolStripMenuItem
             // 
             this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             // 
             // thoátToolStripMenuItem
             // 
             this.thoátToolStripMenuItem.Name = "thoátToolStripMenuItem";
-            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoátToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
             this.thoátToolStripMenuItem.Text = "Thoát";
             // 
             // quảnLýNhânViênToolStripMenuItem
@@ -144,19 +141,19 @@ namespace ShopPhone
             // bánHàngToolStripMenuItem
             // 
             this.bánHàngToolStripMenuItem.Name = "bánHàngToolStripMenuItem";
-            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.bánHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.bánHàngToolStripMenuItem.Text = "Bán hàng";
             // 
             // quảnLýSảnPhẩmToolStripMenuItem1
             // 
             this.quảnLýSảnPhẩmToolStripMenuItem1.Name = "quảnLýSảnPhẩmToolStripMenuItem1";
-            this.quảnLýSảnPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýSảnPhẩmToolStripMenuItem1.Size = new System.Drawing.Size(210, 26);
             this.quảnLýSảnPhẩmToolStripMenuItem1.Text = "Quản lý sản phẩm";
             // 
             // quảnLýĐơnHàngToolStripMenuItem
             // 
             this.quảnLýĐơnHàngToolStripMenuItem.Name = "quảnLýĐơnHàngToolStripMenuItem";
-            this.quảnLýĐơnHàngToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.quảnLýĐơnHàngToolStripMenuItem.Size = new System.Drawing.Size(210, 26);
             this.quảnLýĐơnHàngToolStripMenuItem.Text = "Quản lý đơn hàng";
             // 
             // quảnLýKháchHàngToolStripMenuItem
@@ -177,7 +174,7 @@ namespace ShopPhone
             // doanhThuToolStripMenuItem
             // 
             this.doanhThuToolStripMenuItem.Name = "doanhThuToolStripMenuItem";
-            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.doanhThuToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.doanhThuToolStripMenuItem.Text = "Doanh thu";
             // 
             // chuyểnĐổiDữLiệuToolStripMenuItem
@@ -192,20 +189,72 @@ namespace ShopPhone
             // sQLXMLToolStripMenuItem
             // 
             this.sQLXMLToolStripMenuItem.Name = "sQLXMLToolStripMenuItem";
-            this.sQLXMLToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sQLXMLToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.sQLXMLToolStripMenuItem.Text = "SQL - XML";
             // 
             // xMLSQLToolStripMenuItem
             // 
             this.xMLSQLToolStripMenuItem.Name = "xMLSQLToolStripMenuItem";
-            this.xMLSQLToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.xMLSQLToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.xMLSQLToolStripMenuItem.Text = "XML - SQL";
+            // 
+            // btnKH
+            // 
+            this.btnKH.Location = new System.Drawing.Point(212, 148);
+            this.btnKH.Name = "btnKH";
+            this.btnKH.Size = new System.Drawing.Size(120, 120);
+            this.btnKH.TabIndex = 1;
+            this.btnKH.Text = "KHÁCH HÀNG";
+            this.btnKH.UseVisualStyleBackColor = true;
+            this.btnKH.Click += new System.EventHandler(this.btnKH_Click);
+            // 
+            // btnBanHang
+            // 
+            this.btnBanHang.Location = new System.Drawing.Point(52, 148);
+            this.btnBanHang.Name = "btnBanHang";
+            this.btnBanHang.Size = new System.Drawing.Size(120, 120);
+            this.btnBanHang.TabIndex = 2;
+            this.btnBanHang.Text = "BÁN HÀNG";
+            this.btnBanHang.UseVisualStyleBackColor = true;
+            // 
+            // btnNV
+            // 
+            this.btnNV.Location = new System.Drawing.Point(378, 148);
+            this.btnNV.Name = "btnNV";
+            this.btnNV.Size = new System.Drawing.Size(120, 120);
+            this.btnNV.TabIndex = 1;
+            this.btnNV.Text = "NHÂN VIÊN";
+            this.btnNV.UseVisualStyleBackColor = true;
+            this.btnNV.Click += new System.EventHandler(this.btnNV_Click);
+            // 
+            // btnDonHang
+            // 
+            this.btnDonHang.Location = new System.Drawing.Point(545, 148);
+            this.btnDonHang.Name = "btnDonHang";
+            this.btnDonHang.Size = new System.Drawing.Size(120, 120);
+            this.btnDonHang.TabIndex = 1;
+            this.btnDonHang.Text = "ĐƠN HÀNG";
+            this.btnDonHang.UseVisualStyleBackColor = true;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Location = new System.Drawing.Point(707, 148);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(120, 120);
+            this.btnThongKe.TabIndex = 1;
+            this.btnThongKe.Text = "THỐNG KÊ";
+            this.btnThongKe.UseVisualStyleBackColor = true;
             // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(868, 450);
+            this.ClientSize = new System.Drawing.Size(880, 450);
+            this.Controls.Add(this.btnBanHang);
+            this.Controls.Add(this.btnThongKe);
+            this.Controls.Add(this.btnDonHang);
+            this.Controls.Add(this.btnNV);
+            this.Controls.Add(this.btnKH);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "HomePage";
@@ -234,11 +283,15 @@ namespace ShopPhone
         private System.Windows.Forms.ToolStripMenuItem sQLXMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xMLSQLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đổiMậtKhẩuToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoátToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýNhânViênToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýTàiKhoảnNhânViênToolStripMenuItem;
+        private System.Windows.Forms.Button btnKH;
+        private System.Windows.Forms.Button btnBanHang;
+        private System.Windows.Forms.Button btnNV;
+        private System.Windows.Forms.Button btnDonHang;
+        private System.Windows.Forms.Button btnThongKe;
     }
 }
 

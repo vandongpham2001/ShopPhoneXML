@@ -64,6 +64,7 @@ namespace ShopPhone
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnClose
             // 
@@ -73,6 +74,7 @@ namespace ShopPhone
             this.btnClose.TabIndex = 3;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtUsername
             // 

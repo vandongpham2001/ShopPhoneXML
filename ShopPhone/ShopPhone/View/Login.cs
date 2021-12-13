@@ -16,5 +16,16 @@ namespace ShopPhone
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            HomePage homepage=new HomePage();
+            homepage.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
