@@ -9,11 +9,21 @@ create table SanPham
 	Id int identity(1,1) primary key,
 	TenSanPham nvarchar(100),
 	NhaSX nvarchar(50),
+	ROM nvarchar(50),
+	RAM nvarchar(50),
+	CPU nvarchar(50),
+	ManHinh nvarchar(50),
+	Pin nvarchar(50),
+	Camera nvarchar(50),
+	Mau nvarchar(20),
+	DonGia money,
+	SoLuong int,
+	MoTa nvarchar(max),
 	ThoiGianBaoHanh int,
 	TrangThai nvarchar(50), 
 	IdDanhMuc int foreign key references DanhMuc(Id)
 )
-create table ChiTietSanPham
+/*create table ChiTietSanPham
 (
 	Id int identity(1,1) primary key,
 	ROM nvarchar(50),
@@ -27,7 +37,7 @@ create table ChiTietSanPham
 	SoLuong int,
 	MoTa nvarchar(max),
 	IdSanPham int foreign key references SanPham(Id)
-)
+)*/
 Create table NhanVien
 (
 	id int identity(1,1),
@@ -66,13 +76,12 @@ Create table DonHang
 )
 Create table ChiTietDonHang
 (
-	idChiTietSanPham int,
+	idSanPham int,
 	idDonHang int,
 	soluong int,
 	giaMua Decimal,
 	ngayDat date,
-	primary key(idChiTietSanPham, idDonHang),
-	foreign key(idChiTietSanPham) references ChiTietSanPham(id),
+	primary key(idSanPham, idDonHang),
+	foreign key(idSanPham) references SanPham(id),
 	foreign key(idDonHang) references DonHang(id)
 )
-
