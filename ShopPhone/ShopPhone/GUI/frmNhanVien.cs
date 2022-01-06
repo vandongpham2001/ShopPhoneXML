@@ -66,6 +66,7 @@ namespace ShopPhone.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            LoadDuLieu();
             nv.xoaNV(MaNhanVien);
             MessageBox.Show("Ok");
             hienthiNhanVien();
@@ -86,7 +87,7 @@ namespace ShopPhone.GUI
             string path = Application.StartupPath + "\\NhanVien.xml";
             try
             {
-                System.Diagnostics.Process.Start("Explorer.exe", path);
+                System.Diagnostics.Process.Start("Chrome.exe", path);
             }
             catch (Exception)
             {

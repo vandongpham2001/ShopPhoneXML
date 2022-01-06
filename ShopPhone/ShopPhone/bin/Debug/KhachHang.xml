@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:MainDataTable="_x0027_KhachHang_x0027_" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="_x0027_KhachHang_x0027_">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="MaKhachHang" type="xs:string" minOccurs="0" />
+                <xs:element name="TenKhachHang" type="xs:string" minOccurs="0" />
+                <xs:element name="SDT" type="xs:string" minOccurs="0" />
+                <xs:element name="NgaySinh" type="xs:dateTime" minOccurs="0" />
+                <xs:element name="DiaChi" type="xs:string" minOccurs="0" />
+                <xs:element name="Email" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <_x0027_KhachHang_x0027_>
+    <MaKhachHang>KH001</MaKhachHang>
+    <TenKhachHang>Nguyễn Văn AA</TenKhachHang>
+    <SDT>123456</SDT>
+    <NgaySinh>1900-01-01T00:00:00+07:00</NgaySinh>
+    <DiaChi>QN</DiaChi>
+    <Email>aa@gmail.com</Email>
+  </_x0027_KhachHang_x0027_>
+  <_x0027_KhachHang_x0027_>
+    <MaKhachHang>KH002</MaKhachHang>
+    <TenKhachHang>Nguyễn Văn BB</TenKhachHang>
+    <SDT>123456</SDT>
+    <NgaySinh>2000-02-01</NgaySinh>
+    <DiaChi>QN</DiaChi>
+    <Email>bb@gmail.com</Email>
+  </_x0027_KhachHang_x0027_>
+</NewDataSet>

@@ -49,14 +49,14 @@ namespace ShopPhone.Class
             string noiDung = "<_x0027_TaiKhoan_x0027_>" +
                     "<MaNhanVien>" + MaNhanVien + "</MaNhanVien>" +
                     "<MatKhau>" + MatKhau + "</MatKhau>" +
-                    "<Quyen>" + Quyen + "</Quyen>" +
+                    "<quyen>" + Quyen + "</quyen>" +
                     "</_x0027_TaiKhoan_x0027_>";
 
             Fxml.Them("TaiKhoan.xml", noiDung);
         }
         public void xoaTK(string MaNhanVien)
         {
-            Fxml.Xoa("TaiKhoan.xml", "TaiKhoan", "MaNhanVien", MaNhanVien);
+            Fxml.Xoa("TaiKhoan.xml", "_x0027_TaiKhoan_x0027_", "MaNhanVien", MaNhanVien);
 
         }
         public bool kiemtraTTTK(string MaNhanVien)
@@ -64,7 +64,7 @@ namespace ShopPhone.Class
             XmlTextReader reader = new XmlTextReader("TaiKhoan.xml");
             XmlDocument doc = new XmlDocument();
             doc.Load(reader);
-            XmlNode node = doc.SelectSingleNode("NewDataSet/TaiKhoan[MaNhanVien='" + MaNhanVien + "']");
+            XmlNode node = doc.SelectSingleNode("NewDataSet/_x0027_TaiKhoan_x0027_[MaNhanVien='" + MaNhanVien + "']");
             reader.Close();
             bool kq = true;
             if (node != null)

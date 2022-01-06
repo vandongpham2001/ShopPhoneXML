@@ -16,7 +16,7 @@ namespace ShopPhone.Class
             XmlTextReader reader = new XmlTextReader("NhanVien.xml");
             XmlDocument doc = new XmlDocument();
             doc.Load(reader);
-            XmlNode node = doc.SelectSingleNode("NewDataSet/NhanVien[MaNhanVien='" + MaNhanVien + "']");
+            XmlNode node = doc.SelectSingleNode("NewDataSet/_x0027_NhanVien_x0027_[MaNhanVien='" + MaNhanVien + "']");
             reader.Close();
             bool kq = true;
             if (node != null)
@@ -52,7 +52,7 @@ namespace ShopPhone.Class
                     "<Email>" + Email + "</Email>"+
                     "<GioiTinh>" + GioiTinh + "</GioiTinh>";
 
-            Fxml.Sua("NhanVien.xml", "NhanVien", "MaNhanVien", MaNhanVien, noiDung);
+            Fxml.Sua("NhanVien.xml", "_x0027_NhanVien_x0027_", "MaNhanVien", MaNhanVien, noiDung);
 
 
         }

@@ -54,6 +54,7 @@ namespace ShopPhone.GUI
             this.đăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHeThong = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -270,6 +271,7 @@ namespace ShopPhone.GUI
             this.mnuHeThong,
             this.mnuQLNhanSu,
             this.mnuKinhDoanh,
+            this.quảnLýKháchHàngToolStripMenuItem,
             this.mnuBaoCaoThongKe,
             this.trợGiúpToolStripMenuItem,
             this.chuyểnĐổiDữLiệuToolStripMenuItem});
@@ -278,6 +280,13 @@ namespace ShopPhone.GUI
             this.menuStrip1.Size = new System.Drawing.Size(1277, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // quảnLýKháchHàngToolStripMenuItem
+            // 
+            this.quảnLýKháchHàngToolStripMenuItem.Name = "quảnLýKháchHàngToolStripMenuItem";
+            this.quảnLýKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(152, 24);
+            this.quảnLýKháchHàngToolStripMenuItem.Text = "Quản lý khách hàng";
+            this.quảnLýKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.quảnLýKháchHàngToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -330,5 +339,6 @@ namespace ShopPhone.GUI
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuHeThong;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem quảnLýKháchHàngToolStripMenuItem;
     }
 }

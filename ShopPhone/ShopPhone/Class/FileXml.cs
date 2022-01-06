@@ -80,6 +80,16 @@ namespace ShopPhone.Class
             dt.WriteXml(Application.StartupPath + "\\NhanVien.xml", XmlWriteMode.WriteSchema);
 
         }
+        public void TaoXMLKhachHang()
+        {
+            SqlConnection conn = new SqlConnection(Conn);
+            conn.Open();
+            SqlDataAdapter ad = new SqlDataAdapter("Select * from KhachHang", conn);
+            DataTable dt = new DataTable("KhachHang");
+            ad.Fill(dt);
+            dt.WriteXml(Application.StartupPath + "\\KhachHang.xml", XmlWriteMode.WriteSchema);
+
+        }
         public void TaoXMLHang()
         {
             SqlConnection conn = new SqlConnection(Conn);
@@ -128,7 +138,8 @@ namespace ShopPhone.Class
             string fileName = Application.StartupPath + "\\" + duongDan;
             XmlDocument doc = new XmlDocument();
             doc.Load(fileName);
-            XmlNode nodeCu = doc.SelectSingleNode("NewDataSet/" + tenFileXML + "[" + xoaTheoTruong + "='" + giaTriTruong + "']");
+            string ten = "_x0027_" + tenFileXML +"_x0027_";
+            XmlNode nodeCu = doc.SelectSingleNode("NewDataSet/" + ten + "[" + xoaTheoTruong + "='" + giaTriTruong + "']");
             doc.DocumentElement.RemoveChild(nodeCu);
             doc.Save(fileName);
         }

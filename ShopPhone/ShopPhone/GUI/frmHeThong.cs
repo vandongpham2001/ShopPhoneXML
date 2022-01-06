@@ -195,5 +195,11 @@ namespace ShopPhone.GUI
                 ActivateForm("frmDangNhap");
             }
         }
+
+        private void quảnLýKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmKhachHang frm = new frmKhachHang();
+            frm.ShowDialog();
+        }
     }
 }

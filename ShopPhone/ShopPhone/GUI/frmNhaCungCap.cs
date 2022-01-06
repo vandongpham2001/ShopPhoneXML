@@ -62,7 +62,15 @@ namespace ShopPhone.GUI
 
         private void btnReview_Click(object sender, EventArgs e)
         {
-
+            string path = Application.StartupPath + "\\NhaCungCap.xml";
+            try
+            {
+                System.Diagnostics.Process.Start("Chrome.exe", path);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(this, "Chưa có file cần mở trong bin/debug", "thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

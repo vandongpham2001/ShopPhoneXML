@@ -22,4 +22,9 @@
     <MatKhau>admin</MatKhau>
     <quyen>1</quyen>
   </_x0027_TaiKhoan_x0027_>
+  <_x0027_TaiKhoan_x0027_>
+    <MaNhanVien>NV001</MaNhanVien>
+    <MatKhau>123</MatKhau>
+    <quyen>1</quyen>
+  </_x0027_TaiKhoan_x0027_>
 </NewDataSet>

@@ -63,7 +63,7 @@ namespace ShopPhone.Class
                     "<SoLuong>" + SoLuong + "</SoLuong>" +
                     "<MaNCC>" + MaNCC + "</MaNCC>";
 
-            Fxml.Sua("Hang.xml", "Hang", "MaHang", MaHang, noiDung);
+            Fxml.Sua("Hang.xml", "_x0027_Hang_x0027_", "MaHang", MaHang, noiDung);
 
         }
         public void xoaH(string MaHang)

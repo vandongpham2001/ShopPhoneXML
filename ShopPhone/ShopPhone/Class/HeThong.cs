@@ -12,6 +12,7 @@ namespace ShopPhone.Class
         FileXml Fxml = new FileXml();
         public void TaoXML()
         {
+            Fxml.TaoXML("KhachHang");
             Fxml.TaoXML("ChiTietHoaDon");
             Fxml.TaoXML("Hang");
             Fxml.TaoXML("HoaDon");
@@ -39,6 +40,7 @@ namespace ShopPhone.Class
         public void CapNhapSQL()
         {
             //Xóa toàn bộ dữ liệu các bảng
+            Fxml.InsertOrUpDateSQL("delete from KhachHang");
             Fxml.InsertOrUpDateSQL("delete from NhaCungCap");
             Fxml.InsertOrUpDateSQL("delete from Hang");
             Fxml.InsertOrUpDateSQL("delete from HoaDon");
@@ -47,6 +49,7 @@ namespace ShopPhone.Class
             Fxml.InsertOrUpDateSQL("delete from TaiKhoan");
 
             //Cập nhập toàn bộ dữ liệu các bảng
+            CapNhapTungBang("KhachHang");
             CapNhapTungBang("NhaCungCap");
             CapNhapTungBang("Hang");
             CapNhapTungBang("HoaDon");

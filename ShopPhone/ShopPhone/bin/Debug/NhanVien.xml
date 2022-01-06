@@ -23,7 +23,7 @@
   <_x0027_NhanVien_x0027_>
     <MaNhanVien>admin</MaNhanVien>
     <TenNhanVien>admin</TenNhanVien>
-    <NgaySinh>2002-02-02</NgaySinh>
+    <NgaySinh>2002-02-02T00:00:00+07:00</NgaySinh>
     <SDT>123456789</SDT>
     <Email>admin@gmail.com</Email>
     <GioiTinh>Nam</GioiTinh>
@@ -31,17 +31,9 @@
   <_x0027_NhanVien_x0027_>
     <MaNhanVien>NV001</MaNhanVien>
     <TenNhanVien>Nguyen Van A</TenNhanVien>
-    <NgaySinh>2000-01-01</NgaySinh>
+    <NgaySinh>2000-01-01T00:00:00+07:00</NgaySinh>
     <SDT>123456789</SDT>
     <Email>a@gmail.com</Email>
-    <GioiTinh>Nam</GioiTinh>
-  </_x0027_NhanVien_x0027_>
-  <_x0027_NhanVien_x0027_>
-    <MaNhanVien>NV002</MaNhanVien>
-    <TenNhanVien>Nguyen Van B</TenNhanVien>
-    <NgaySinh>2001-02-06</NgaySinh>
-    <SDT>1234567890</SDT>
-    <Email>b@gmail.com</Email>
-    <GioiTinh>Nam</GioiTinh>
+    <GioiTinh>N?</GioiTinh>
   </_x0027_NhanVien_x0027_>
 </NewDataSet>

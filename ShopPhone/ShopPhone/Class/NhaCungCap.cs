@@ -47,7 +47,7 @@ namespace ShopPhone.Class
                     "<DiaChi>" + DiaChi + "</DiaChi>" +
                     "<SDT>" + SDT + "</SDT>" +
                     "<Email>" + Email + "</Email>";
-            Fxml.Sua("NhaCungCap.xml", "NhaCungCap", "MaNCC", MaNCC, noiDung);
+            Fxml.Sua("NhaCungCap.xml", "_x0027_NhaCungCap_x0027_", "MaNCC", MaNCC, noiDung);
 
         }
         public void xoaNCC(string MaNCC)
