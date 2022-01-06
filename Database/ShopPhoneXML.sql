@@ -1,13 +1,19 @@
-create table DanhMuc
+--create database ShopPhone
+go
+use ShopPhone
+go
+create table NhaCungCap
 (
-	Id int identity(1,1) primary key,
-	TenDanhMuc nvarchar(50),
-	TrangThai nvarchar(50)
+	MaNCC varchar(10) primary key,
+	TenNCC nvarchar(50),
+	DiaChi nvarchar(100),
+	SDT	   nvarchar(11),
+	Email	nvarchar(100)
 )
-create table SanPham
+create table Hang
 (
-	Id int identity(1,1) primary key,
-	TenSanPham nvarchar(100),
+	MaHang varchar(10) primary key,
+	TenHang nvarchar(100),
 	NhaSX nvarchar(50),
 	ROM nvarchar(50),
 	RAM nvarchar(50),
@@ -15,73 +21,59 @@ create table SanPham
 	ManHinh nvarchar(50),
 	Pin nvarchar(50),
 	Camera nvarchar(50),
-	Mau nvarchar(20),
 	DonGia money,
 	SoLuong int,
-	MoTa nvarchar(max),
-	ThoiGianBaoHanh int,
-	TrangThai nvarchar(50), 
-	IdDanhMuc int foreign key references DanhMuc(Id)
+	MaNCC varchar(10) foreign key references NhaCungCap(MaNCC) on delete cascade on update cascade
 )
-/*create table ChiTietSanPham
-(
-	Id int identity(1,1) primary key,
-	ROM nvarchar(50),
-	RAM nvarchar(50),
-	CPU nvarchar(50),
-	ManHinh nvarchar(50),
-	Pin nvarchar(50),
-	Camera nvarchar(50),
-	Mau nvarchar(20),
-	DonGia money,
-	SoLuong int,
-	MoTa nvarchar(max),
-	IdSanPham int foreign key references SanPham(Id)
-)*/
 Create table NhanVien
 (
-	id int identity(1,1),
-	username varchar(50),
-	password varchar(50),
-	HoTen nvarchar(100),
+	MaNhanVien varchar(10),
+	TenNhanVien nvarchar(100),
+	NgaySinh date,
 	SDT varchar(11),
-	GioiTinh int,
 	Email varchar(30),
-	ngaySinh date,
-	TrangThai nvarchar(50),
-	primary key(id),
+	GioiTinh varchar(10),
+	primary key(MaNhanVien),
+)
+Create table TaiKhoan
+(
+	MaNhanVien varchar(10),
+	MatKhau varchar(50),
+	quyen int,
+	foreign key(MaNhanVien) references NhanVien(MaNhanVien) on delete cascade on update cascade
+
 )
 Create table KhachHang
 (
-	id int identity(1,1) ,
-	Hoten nvarchar(100),
+	MaKhachHang varchar(10),
+	TenKhachHang nvarchar(100),
 	SDT varchar(11),
-	ngaySinh date,
-	diaChi nvarchar(50),
-	email varchar(50),
-	primary key (id)
+	NgaySinh date,
+	DiaChi nvarchar(50),
+	Email varchar(50),
+	primary key (MaKhachHang)
 )
-Create table DonHang
+Create table HoaDon
 (
-	id int identity(1,1),
-	idKhachHang int,
-	idNhanVien int,
+	SoHoaDon int identity(1,1),
+	MaKhachHang varchar(10),
+	MaNhanVien varchar(10),
 	diaChi nvarchar(50),
 	SDT varchar(11),
 	TrangThai nvarchar(30),
 	ngaytao date,
-	primary key (id),
-	foreign key(idKhachHang) references KhachHang(id),
-	foreign key(idNhanVien) references NhanVien(id)
+	primary key (SoHoaDon),
+	foreign key(MaKhachHang) references KhachHang(MaKhachHang) on delete cascade on update cascade,
+	foreign key(MaNhanVien) references NhanVien(MaNhanVien) on delete cascade on update cascade
 )
-Create table ChiTietDonHang
+Create table ChiTietHoaDon
 (
-	idSanPham int,
-	idDonHang int,
+	Id int identity(1,1) primary key,
+	MaHang varchar(10),
+	SoHoaDon int,
 	soluong int,
 	giaMua Decimal,
 	ngayDat date,
-	primary key(idSanPham, idDonHang),
-	foreign key(idSanPham) references SanPham(id),
-	foreign key(idDonHang) references DonHang(id)
+	foreign key(MaHang) references Hang(MaHang) on delete cascade on update cascade,
+	foreign key(SoHoaDon) references HoaDon(SoHoaDon) on delete cascade on update cascade
 )
