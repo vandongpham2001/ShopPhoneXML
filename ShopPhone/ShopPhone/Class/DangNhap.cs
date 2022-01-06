@@ -46,11 +46,11 @@ namespace ShopPhone.Class
         }
         public void dangkiTaiKhoan(string MaNhanVien, string MatKhau, int Quyen)
         {
-            string noiDung = "<TaiKhoan>" +
+            string noiDung = "<_x0027_TaiKhoan_x0027_>" +
                     "<MaNhanVien>" + MaNhanVien + "</MaNhanVien>" +
                     "<MatKhau>" + MatKhau + "</MatKhau>" +
                     "<Quyen>" + Quyen + "</Quyen>" +
-                    "</TaiKhoan>";
+                    "</_x0027_TaiKhoan_x0027_>";
 
             Fxml.Them("TaiKhoan.xml", noiDung);
         }

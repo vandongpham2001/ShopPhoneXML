@@ -19,11 +19,25 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
-  <NhaCungCap>
+  <_x0027_NhaCungCap_x0027_>
     <MaNCC>NCC01</MaNCC>
     <TenNCC>Samsung</TenNCC>
     <DiaChi>Han Quoc</DiaChi>
     <SDT>123456</SDT>
     <Email>samsung@gmail.com</Email>
-  </NhaCungCap>
+  </_x0027_NhaCungCap_x0027_>
+  <_x0027_NhaCungCap_x0027_>
+    <MaNCC>NCC02</MaNCC>
+    <TenNCC>Apple</TenNCC>
+    <DiaChi>Mỹ</DiaChi>
+    <SDT>123456</SDT>
+    <Email>apple@gmail.com</Email>
+  </_x0027_NhaCungCap_x0027_>
+  <_x0027_NhaCungCap_x0027_>
+    <MaNCC>NCC03</MaNCC>
+    <TenNCC>Oppo</TenNCC>
+    <DiaChi>Trung Quốc</DiaChi>
+    <SDT>123</SDT>
+    <Email>oppo@gmail.com</Email>
+  </_x0027_NhaCungCap_x0027_>
 </NewDataSet>

@@ -30,13 +30,13 @@ namespace ShopPhone.Class
         }
         public void themNCC(string MaNCC, string TenNCC, string DiaChi, string SDT, string Email)
         {
-            string noiDung = "<NhaCungCap>" +
+            string noiDung = "<_x0027_NhaCungCap_x0027_>" +
                     "<MaNCC>" + MaNCC + "</MaNCC>" +
                     "<TenNCC>" + TenNCC + "</TenNCC>" +
                     "<DiaChi>" + DiaChi + "</DiaChi>" +
                     "<SDT>" + SDT + "</SDT>" +
                     "<Email>" + Email + "</Email>" +
-                    "</NhaCungCap>";
+                    "</_x0027_NhaCungCap_x0027_>";
             Fxml.Them("NhaCungCap.xml", noiDung);
         }
         public void suaNCC(string MaNCC, string TenNCC, string DiaChi, string SDT, string Email)

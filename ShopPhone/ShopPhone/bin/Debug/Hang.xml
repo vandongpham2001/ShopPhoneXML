@@ -26,4 +26,18 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  <_x0027_Hang_x0027_>
+    <MaHang>H0001</MaHang>
+    <TenHang>Samsung Galaxy A52</TenHang>
+    <NhaSX>Samsung</NhaSX>
+    <ROM>128 GB</ROM>
+    <RAM>6 GB</RAM>
+    <CPU>Exynos</CPU>
+    <ManHinh>6,4 inch</ManHinh>
+    <Pin>4000 mAh</Pin>
+    <Camera>48 MP</Camera>
+    <DonGia>6000000</DonGia>
+    <SoLuong>10</SoLuong>
+    <MaNCC>NCC01</MaNCC>
+  </_x0027_Hang_x0027_>
 </NewDataSet>

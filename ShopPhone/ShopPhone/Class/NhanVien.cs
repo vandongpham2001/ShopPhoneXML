@@ -27,7 +27,6 @@ namespace ShopPhone.Class
             {
                 kq= false;
                 return kq;
-
             }
 
         }

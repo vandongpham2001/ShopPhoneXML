@@ -31,7 +31,7 @@ namespace ShopPhone.Class
         }
         public void themH(string MaHang, string TenHang, string NhaSX, string ROM, string RAM, string CPU, string ManHinh, string Pin, string Camera, string DonGia, string SoLuong, string MaNCC)
         {
-            string noiDung = "<Hang>" +
+            string noiDung = "<_x0027_Hang_x0027_>" +
                     "<MaHang>" + MaHang + "</MaHang>" +
                     "<TenHang>" + TenHang + "</TenHang>" +
                     "<NhaSX>" + NhaSX + "</NhaSX>" +
@@ -44,7 +44,7 @@ namespace ShopPhone.Class
                     "<DonGia>" + DonGia + "</DonGia>" +
                     "<SoLuong>" + SoLuong + "</SoLuong>" +
                     "<MaNCC>" + MaNCC + "</MaNCC>" +
-                    "</Hang>";
+                    "</_x0027_Hang_x0027_>";
             Fxml.Them("Hang.xml", noiDung);
         }
         public void suaH(string MaHang, string TenHang, string NhaSX, string ROM, string RAM, string CPU, string ManHinh, string Pin, string Camera, string DonGia, string SoLuong, string MaNCC)
