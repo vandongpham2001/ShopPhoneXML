@@ -18,14 +18,14 @@ namespace ShopPhone.Class
             doc.Load(reader);
             XmlNode node = doc.SelectSingleNode("NewDataSet/NhaCungCap[MaNCC='" + MaNCC + "']");
             reader.Close();
-            bool kq = true;
+            //bool kq = true;
             if (node != null)
             {
-                return kq = true;
+                return true;
             }
             else
             {
-                return kq = false;
+                return false;
             }
         }
         public void themNCC(string MaNCC, string TenNCC, string DiaChi, string SDT, string Email)

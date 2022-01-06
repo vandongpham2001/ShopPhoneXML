@@ -3,11 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ShopPhone.GUI
 {
@@ -200,6 +202,205 @@ namespace ShopPhone.GUI
         {
             frmKhachHang frm = new frmKhachHang();
             frm.ShowDialog();
+        }
+
+        private void chuyểnĐổiSangHTMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            String pathItem = "NhanVien.xml";
+            String pathHTML = "NhanVien.html";
+            XDocument xItem = XDocument.Load(pathItem);
+
+            var xI = xItem.Descendants("_x0027_NhanVien_x0027_");
+            var html = new XElement("html", // Tạo cây HTML trong bộ nhớ
+            new XElement("head",
+                new XElement("style", "table{border:solid 1px red;border - collapse: collapse}", "td{border:solid 1px silver;}"// Hãy thêm nhiều style nữa ở đây.
+                            )// End of style
+                        ), // End of head
+                new XElement("body",
+                    new XElement("h2", "Danh sách"),
+                        new XElement("table",
+                            new XElement("tr",
+                                new XElement("td", "MaNV"),
+                                new XElement("td", "TenNV"),
+                                new XElement("td", "SDT"),
+                                new XElement("td", "NgaySinh"),
+                                new XElement("td", "Email"),
+                                new XElement("td", "GioiTinh")
+                                        ), // End of tr of table header
+                                from el in xI
+                                select new XElement("tr",
+                                new XElement("td", el.Element("MaNhanVien").Value),
+                                new XElement("td", el.Element("TenNhanVien").Value),
+                                new XElement("td", el.Element("SDT").Value),
+                                new XElement("td", el.Element("NgaySinh").Value),
+                                new XElement("td", el.Element("Email").Value),
+                                new XElement("td", el.Element("GioiTinh").Value)
+                                                    ) 
+                                        ) // End of table
+                            ) // End of body
+                            ); // End of html
+            html.Save(pathHTML);
+            Process.Start(pathHTML);
+        }
+
+        private void chuyểnĐổiSangHTMLToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            String pathItem = "TaiKhoan.xml";
+            String pathHTML = "TaiKhoan.html";
+            XDocument xItem = XDocument.Load(pathItem);
+
+            var xI = xItem.Descendants("_x0027_TaiKhoan_x0027_");
+            var html = new XElement("html", // Tạo cây HTML trong bộ nhớ
+            new XElement("head",
+                new XElement("style", "table{border:solid 1px red;border - collapse: collapse}", "td{border:solid 1px silver;}"// Hãy thêm nhiều style nữa ở đây.
+                            )// End of style
+                        ), // End of head
+                new XElement("body",
+                    new XElement("h2", "Danh sách"),
+                        new XElement("table",
+                            new XElement("tr",
+                                new XElement("td", "MaNV"),
+                                new XElement("td", "MatKhau"),
+                                new XElement("td", "Quyen")
+                                        ), // End of tr of table header
+                                from el in xI
+                                select new XElement("tr",
+                                new XElement("td", el.Element("MaNhanVien").Value),
+                                new XElement("td", el.Element("MatKhau").Value),
+                                new XElement("td", el.Element("quyen").Value)
+                                                    )
+                                        ) // End of table
+                            ) // End of body
+                            ); // End of html
+            html.Save(pathHTML);
+            Process.Start(pathHTML);
+        }
+
+        private void chuyểnĐổiSangHTMLToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            String pathItem = "Hang.xml";
+            String pathHTML = "Hang.html";
+            XDocument xItem = XDocument.Load(pathItem);
+
+            var xI = xItem.Descendants("_x0027_Hang_x0027_");
+            var html = new XElement("html", // Tạo cây HTML trong bộ nhớ
+            new XElement("head",
+                new XElement("style", "table{border:solid 1px red;border - collapse: collapse}", "td{border:solid 1px silver;}"// Hãy thêm nhiều style nữa ở đây.
+                            )// End of style
+                        ), // End of head
+                new XElement("body",
+                    new XElement("h2", "Danh sách"),
+                        new XElement("table",
+                            new XElement("tr",
+                                new XElement("td", "MaHang"),
+                                new XElement("td", "TenHang"),
+                                new XElement("td", "NhaSX"),
+                                new XElement("td", "ROM"),
+                                new XElement("td", "RAM"),
+                                new XElement("td", "CPU"),
+                                new XElement("td", "ManHinh"),
+                                new XElement("td", "Pin"),
+                                new XElement("td", "Camera"),
+                                new XElement("td", "DonGia"),
+                                new XElement("td", "SoLuong"),
+                                new XElement("td", "MaNCC")
+                                        ), // End of tr of table header
+                                from el in xI
+                                select new XElement("tr",
+                                new XElement("td", el.Element("MaHang").Value),
+                                new XElement("td", el.Element("TenHang").Value),
+                                new XElement("td", el.Element("NhaSX").Value),
+                                new XElement("td", el.Element("ROM").Value),
+                                new XElement("td", el.Element("RAM").Value),
+                                new XElement("td", el.Element("CPU").Value),
+                                new XElement("td", el.Element("ManHinh").Value),
+                                new XElement("td", el.Element("Pin").Value),
+                                new XElement("td", el.Element("Camera").Value),
+                                new XElement("td", el.Element("DonGia").Value),
+                                new XElement("td", el.Element("SoLuong").Value),
+                                new XElement("td", el.Element("MaNCC").Value)
+                                                    )
+                                        ) // End of table
+                            ) // End of body
+                            ); // End of html
+            html.Save(pathHTML);
+            Process.Start(pathHTML);
+        }
+
+        private void chuyểnĐổiSangHTMLToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            String pathItem = "NhaCungCap.xml";
+            String pathHTML = "NhaCungCap.html";
+            XDocument xItem = XDocument.Load(pathItem);
+
+            var xI = xItem.Descendants("_x0027_NhaCungCap_x0027_");
+            var html = new XElement("html", // Tạo cây HTML trong bộ nhớ
+            new XElement("head",
+                new XElement("style", "table{border:solid 1px red;border - collapse: collapse}", "td{border:solid 1px silver;}"// Hãy thêm nhiều style nữa ở đây.
+                            )// End of style
+                        ), // End of head
+                new XElement("body",
+                    new XElement("h2", "Danh sách"),
+                        new XElement("table",
+                            new XElement("tr",
+                                new XElement("td", "MaNCC"),
+                                new XElement("td", "TenNCC"),
+                                new XElement("td", "DiaChi"),
+                                new XElement("td", "SDT"),
+                                new XElement("td", "Email")
+                                        ), // End of tr of table header
+                                from el in xI
+                                select new XElement("tr",
+                                new XElement("td", el.Element("MaNCC").Value),
+                                new XElement("td", el.Element("TenNCC").Value),
+                                new XElement("td", el.Element("DiaChi").Value),
+                                new XElement("td", el.Element("SDT").Value),
+                                new XElement("td", el.Element("Email").Value)
+                                                    )
+                                        ) // End of table
+                            ) // End of body
+                            ); // End of html
+            html.Save(pathHTML);
+            Process.Start(pathHTML);
+        }
+
+        private void chuyểnĐổiSangHTMLToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            String pathItem = "KhachHang.xml";
+            String pathHTML = "KhachHang.html";
+            XDocument xItem = XDocument.Load(pathItem);
+
+            var xI = xItem.Descendants("_x0027_KhachHang_x0027_");
+            var html = new XElement("html", // Tạo cây HTML trong bộ nhớ
+            new XElement("head",
+                new XElement("style", "table{border:solid 1px red;border - collapse: collapse}", "td{border:solid 1px silver;}"// Hãy thêm nhiều style nữa ở đây.
+                            )// End of style
+                        ), // End of head
+                new XElement("body",
+                    new XElement("h2", "Danh sách"),
+                        new XElement("table",
+                            new XElement("tr",
+                                new XElement("td", "MaKH"),
+                                new XElement("td", "TenKH"),
+                                new XElement("td", "SDT"),
+                                new XElement("td", "NgaySinh"),
+                                new XElement("td", "DiaChi"),
+                                new XElement("td", "Email")
+                                        ), // End of tr of table header
+                                from el in xI
+                                select new XElement("tr",
+                                new XElement("td", el.Element("MaKhachHang").Value),
+                                new XElement("td", el.Element("TenKhachHang").Value),
+                                new XElement("td", el.Element("SDT").Value),
+                                new XElement("td", el.Element("NgaySinh").Value),
+                                new XElement("td", el.Element("DiaChi").Value),
+                                new XElement("td", el.Element("Email").Value)
+                                                    )
+                                        ) // End of table
+                            ) // End of body
+                            ); // End of html
+            html.Save(pathHTML);
+            Process.Start(pathHTML);
         }
     }
 }

@@ -31,14 +31,14 @@ namespace ShopPhone.Class
             XmlNode node = doc.SelectSingleNode("NewDataSet/TaiKhoan[MaNhanVien='" + MaNhanVien + "']");
             node = doc.SelectSingleNode("NewDataSet/TaiKhoan[MatKhau='" + MatKhau + "']");
             reader.Close();
-            bool kq = true;
+            //bool kq = true;
             if (node != null)
             {
-                return kq = true;
+                return true;
             }
             else
             {
-                return kq = false;
+                return false;
 
             }
 
