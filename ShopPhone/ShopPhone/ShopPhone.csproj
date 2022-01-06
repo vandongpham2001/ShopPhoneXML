@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62E3D445-B0EB-40EE-B55C-95A4F3FB9968}</ProjectGuid>
+    <ProjectGuid>{F6FD7510-E24F-466A-AEED-4748B04C031A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ShopPhone</RootNamespace>
     <AssemblyName>ShopPhone</AssemblyName>
@@ -46,55 +46,89 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Customer.cs">
+    <Compile Include="Class\DangNhap.cs" />
+    <Compile Include="Class\DoiMatKhau.cs" />
+    <Compile Include="Class\FileXml.cs" />
+    <Compile Include="Class\Hang.cs" />
+    <Compile Include="Class\HeThong.cs" />
+    <Compile Include="Class\HoaDon.cs" />
+    <Compile Include="Class\KhachHang.cs" />
+    <Compile Include="Class\Main.cs" />
+    <Compile Include="Class\NhaCungCap.cs" />
+    <Compile Include="Class\NhanVien.cs" />
+    <Compile Include="GUI\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Customer.Designer.cs">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <Compile Include="GUI\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Employee.cs">
+    <Compile Include="GUI\frmDoiMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Employee.Designer.cs">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <Compile Include="GUI\frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\HomePage.cs">
+    <Compile Include="GUI\frmHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\HomePage.Designer.cs">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <Compile Include="GUI\frmHang.Designer.cs">
+      <DependentUpon>frmHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Login.cs">
+    <Compile Include="GUI\frmHeThong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="GUI\frmHeThong.Designer.cs">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmHoaDon.Designer.cs">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmNhanVien.Designer.cs">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmTaiKhoanNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmTaiKhoanNV.Designer.cs">
+      <DependentUpon>frmTaiKhoanNV.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Orders.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Orders.Designer.cs">
-      <DependentUpon>Orders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Product.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Product.Designer.cs">
-      <DependentUpon>Product.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="View\Customer.resx">
-      <DependentUpon>Customer.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Employee.resx">
-      <DependentUpon>Employee.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\HomePage.resx">
-      <DependentUpon>HomePage.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmHang.resx">
+      <DependentUpon>frmHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\frmHeThong.resx">
+      <DependentUpon>frmHeThong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmHoaDon.resx">
+      <DependentUpon>frmHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmNhanVien.resx">
+      <DependentUpon>frmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmTaiKhoanNV.resx">
+      <DependentUpon>frmTaiKhoanNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -104,13 +138,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="View\Orders.resx">
-      <DependentUpon>Orders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Product.resx">
-      <DependentUpon>Product.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -124,8 +153,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Class\" />
+    <Content Include="Resources\banner.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
