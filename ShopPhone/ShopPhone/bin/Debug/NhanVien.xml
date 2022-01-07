@@ -34,6 +34,22 @@
     <NgaySinh>2000-01-01T00:00:00+07:00</NgaySinh>
     <SDT>123456789</SDT>
     <Email>a@gmail.com</Email>
+    <GioiTinh>N?</GioiTinh>
+  </_x0027_NhanVien_x0027_>
+  <_x0027_NhanVien_x0027_>
+    <MaNhanVien>NV002</MaNhanVien>
+    <TenNhanVien>Nguyen Thi C</TenNhanVien>
+    <NgaySinh>2022-01-08</NgaySinh>
+    <SDT>123456789</SDT>
+    <Email>c@gmail.com</Email>
+    <GioiTinh>Nữ</GioiTinh>
+  </_x0027_NhanVien_x0027_>
+  <_x0027_NhanVien_x0027_>
+    <MaNhanVien>NV003</MaNhanVien>
+    <TenNhanVien>Nguyen Thi CD</TenNhanVien>
+    <NgaySinh>2022-01-08</NgaySinh>
+    <SDT>123456789</SDT>
+    <Email>cd@gmail.com</Email>
     <GioiTinh>Nữ</GioiTinh>
   </_x0027_NhanVien_x0027_>
 </NewDataSet>

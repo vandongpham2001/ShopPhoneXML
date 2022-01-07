@@ -55,7 +55,7 @@ Create table KhachHang
 )
 Create table HoaDon
 (
-	SoHoaDon int identity(1,1),
+	SoHoaDon int,
 	MaKhachHang varchar(10),
 	MaNhanVien varchar(10),
 	diaChi nvarchar(50),
@@ -68,7 +68,7 @@ Create table HoaDon
 )
 Create table ChiTietHoaDon
 (
-	Id int identity(1,1) primary key,
+	Id int primary key,
 	MaHang varchar(10),
 	SoHoaDon int,
 	soluong int,

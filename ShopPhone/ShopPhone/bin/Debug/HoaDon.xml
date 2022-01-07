@@ -21,4 +21,13 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  <_x0027_HoaDon_x0027_>
+    <SoHoaDon>1</SoHoaDon>
+    <MaKhachHang>KH001</MaKhachHang>
+    <MaNhanVien>NV001</MaNhanVien>
+    <diaChi>Quảng Nam</diaChi>
+    <SDT>123456789</SDT>
+    <TrangThai>Chờ xử lý</TrangThai>
+    <ngaytao>2022-01-08T00:00:00+07:00</ngaytao>
+  </_x0027_HoaDon_x0027_>
 </NewDataSet>

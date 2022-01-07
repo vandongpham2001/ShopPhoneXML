@@ -14,43 +14,78 @@ namespace ShopPhone.GUI
     public partial class frmHoaDon : Form
     {
         FileXml Fxml = new FileXml();
+        HoaDon hd = new HoaDon();
+        string MaKhachHang, MaNhanVien, DiaChi, SDT, TrangThai, NgayLap, SoHD;
         public frmHoaDon()
         {
             InitializeComponent();
         }
-
-        private void txtMaHang_KeyPress(object sender, KeyPressEventArgs e)
+        public void hienthiHoaDon()
         {
-            txtDonGia.Text = Fxml.LayGiaTri("Hang.xml", "MaHang", txtMaHang.Text, "DonGia");
+            DataTable dt = new DataTable();
+            dt = Fxml.HienThi("HoaDon.xml");
+            dgvHoaDon.DataSource = dt;
+
         }
-
-        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        public void LoadDuLieu()
         {
-            if (txtSoLuong.Text == " ")
-            {
-                txtSoLuong.Text = "";
-            }
-            else
-            {
-                try
-                {
-                    int a = int.Parse(txtSoLuong.Text);
-                    long t = int.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text);
-                    txtTongTien.Text = t.ToString();
-                }
-                catch
-                {
-                    txtSoLuong.Text = "";
-                }
-            }
+            SoHD = cbbSoHoaDon.SelectedItem.ToString();
+            MaKhachHang = cbbMaKhachHang.SelectedItem.ToString();
+            MaNhanVien = cbbMaNhanVien.SelectedItem.ToString();
+            DiaChi = txtDiaChi.Text;
+            TrangThai = txtTrangThai.Text;
+            SDT = txtSDT.Text;
+            NgayLap = dtpNgayLap.Value.ToString("yyyy-MM-dd");
         }
-
-        private void btnThanhToan_Click(object sender, EventArgs e)
+        private void frmHoaDon_Load(object sender, EventArgs e)
         {
-
+            hienthiHoaDon();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
+        {
+            LoadDuLieu();
+            int sohd = Int32.Parse(SoHD);
+            if (hd.kiemtra(sohd) == true)
+            {
+                MessageBox.Show("Số hoá đơn đã tồn tại");
+            }
+            else
+            {
+                hd.themHD(sohd, MaKhachHang, MaNhanVien, DiaChi, SDT, TrangThai);
+                MessageBox.Show("Ok");
+                hienthiHoaDon();
+                cbbSoHoaDon.Focus();
+            }
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int d = dgvHoaDon.CurrentRow.Index;
+            cbbMaKhachHang.SelectedItem = dgvHoaDon.Rows[d].Cells[1].Value.ToString();
+            cbbSoHoaDon.SelectedItem = dgvHoaDon.Rows[d].Cells[0].Value.ToString();
+            txtSDT.Text = dgvHoaDon.Rows[d].Cells[4].Value.ToString();
+            dtpNgayLap.Text = dgvHoaDon.Rows[d].Cells[6].Value.ToString();
+            txtDiaChi.Text = dgvHoaDon.Rows[d].Cells[3].Value.ToString();
+            txtTrangThai.Text = dgvHoaDon.Rows[d].Cells[5].Value.ToString();
+            cbbMaNhanVien.SelectedItem= dgvHoaDon.Rows[d].Cells[2].Value.ToString();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            LoadDuLieu();
+            int sohd = Int32.Parse(SoHD);
+            hd.suaHD(sohd, MaKhachHang, MaNhanVien, DiaChi, SDT, TrangThai);
+            MessageBox.Show("Ok");
+            hienthiHoaDon();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
         {
 
         }
