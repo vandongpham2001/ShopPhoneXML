@@ -211,5 +211,25 @@ namespace ShopPhone.Class
             cmd.ExecuteNonQuery();
             con.Close();
         }
+        public XmlDocument OpenXml(string path)
+        {
+            // Kiểm tra và load tệp được khai báo trong path           	
+            if (File.Exists(path))
+            {
+                try
+                {
+                    XmlDocument doc = new XmlDocument();
+                    doc.Load(path);
+                    return doc;
+                }
+                catch (Exception ex)
+                {
+                    string e = ex.Message.ToString();
+                    MessageBox.Show("Data Is'nt Valid", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                }
+            }
+            MessageBox.Show(path + " not found!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            return null;
+        }   // end function
     }
 }

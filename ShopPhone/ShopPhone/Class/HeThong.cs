@@ -12,13 +12,13 @@ namespace ShopPhone.Class
         FileXml Fxml = new FileXml();
         public void TaoXML()
         {
+            Fxml.TaoXML("NhanVien");
+            Fxml.TaoXML("TaiKhoan");
             Fxml.TaoXML("KhachHang");
-            Fxml.TaoXML("ChiTietHoaDon");
+            Fxml.TaoXML("NhaCungCap");
             Fxml.TaoXML("Hang");
             Fxml.TaoXML("HoaDon");
-            Fxml.TaoXML("NhanVien");
-            Fxml.TaoXML("NhaCungCap");
-            Fxml.TaoXML("TaiKhoan");
+            Fxml.TaoXML("ChiTietHoaDon");
         }
         void CapNhapTungBang(string tenBang)
         {
@@ -40,22 +40,22 @@ namespace ShopPhone.Class
         public void CapNhapSQL()
         {
             //Xóa toàn bộ dữ liệu các bảng
+            Fxml.InsertOrUpDateSQL("delete from NhanVien");
+            Fxml.InsertOrUpDateSQL("delete from TaiKhoan");
             Fxml.InsertOrUpDateSQL("delete from KhachHang");
             Fxml.InsertOrUpDateSQL("delete from NhaCungCap");
             Fxml.InsertOrUpDateSQL("delete from Hang");
             Fxml.InsertOrUpDateSQL("delete from HoaDon");
-            Fxml.InsertOrUpDateSQL("delete from NhanVien");
             Fxml.InsertOrUpDateSQL("delete from ChiTietHoaDon");
-            Fxml.InsertOrUpDateSQL("delete from TaiKhoan");
 
             //Cập nhập toàn bộ dữ liệu các bảng
+            CapNhapTungBang("NhanVien");
+            CapNhapTungBang("TaiKhoan");
             CapNhapTungBang("KhachHang");
             CapNhapTungBang("NhaCungCap");
             CapNhapTungBang("Hang");
             CapNhapTungBang("HoaDon");
             CapNhapTungBang("ChiTietHoaDon");
-            CapNhapTungBang("NhanVien");
-            CapNhapTungBang("TaiKhoan");
         }
     }
 }

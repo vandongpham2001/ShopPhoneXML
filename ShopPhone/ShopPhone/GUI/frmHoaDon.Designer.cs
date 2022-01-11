@@ -256,7 +256,7 @@ namespace ShopPhone.GUI
             this.txtSDT.Location = new System.Drawing.Point(118, 125);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(126, 22);
+            this.txtSDT.Size = new System.Drawing.Size(135, 22);
             this.txtSDT.TabIndex = 24;
             // 
             // cbbSoHoaDon
@@ -266,6 +266,7 @@ namespace ShopPhone.GUI
             this.cbbSoHoaDon.Name = "cbbSoHoaDon";
             this.cbbSoHoaDon.Size = new System.Drawing.Size(135, 24);
             this.cbbSoHoaDon.TabIndex = 36;
+            this.cbbSoHoaDon.SelectedIndexChanged += new System.EventHandler(this.cbbSoHoaDon_SelectedIndexChanged);
             // 
             // frmHoaDon
             // 

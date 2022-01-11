@@ -60,6 +60,7 @@ namespace ShopPhone.GUI
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýKháchHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chuyểnĐổiSangHTMLToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -203,7 +204,8 @@ namespace ShopPhone.GUI
             this.mnuKinhDoanh.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bánHàngToolStripMenuItem,
             this.quảnLýHàngToolStripMenuItem,
-            this.quảnLýNhàCungCấpToolStripMenuItem});
+            this.quảnLýNhàCungCấpToolStripMenuItem,
+            this.hoáĐơnToolStripMenuItem});
             this.mnuKinhDoanh.Name = "mnuKinhDoanh";
             this.mnuKinhDoanh.Size = new System.Drawing.Size(98, 24);
             this.mnuKinhDoanh.Text = "Kinh doanh";
@@ -338,6 +340,13 @@ namespace ShopPhone.GUI
             this.chuyểnĐổiSangHTMLToolStripMenuItem4.Text = "Chuyển đổi sang HTML";
             this.chuyểnĐổiSangHTMLToolStripMenuItem4.Click += new System.EventHandler(this.chuyểnĐổiSangHTMLToolStripMenuItem4_Click);
             // 
+            // hoáĐơnToolStripMenuItem
+            // 
+            this.hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
+            this.hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
+            this.hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
+            this.hoáĐơnToolStripMenuItem.Click += new System.EventHandler(this.hoáĐơnToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -395,5 +404,6 @@ namespace ShopPhone.GUI
         private System.Windows.Forms.ToolStripMenuItem chuyểnĐổiSangHTMLToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem chuyểnĐổiSangHTMLToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chuyểnĐổiSangHTMLToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
     }
 }

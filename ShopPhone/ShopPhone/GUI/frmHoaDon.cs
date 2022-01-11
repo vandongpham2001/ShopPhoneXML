@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace ShopPhone.GUI
 {
@@ -27,6 +28,54 @@ namespace ShopPhone.GUI
             dgvHoaDon.DataSource = dt;
 
         }
+        public void LoadCbbSoHD()
+        {
+            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
+            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
+            string tmp = "";
+            //cbbSoHoaDon.Items.Add("All");
+            foreach (XmlElement ele in list)
+            {
+                string group = ele.ToString();
+                if (!tmp.Contains(group))
+                {
+                    tmp = tmp + "," + group;
+                    cbbSoHoaDon.Items.Add(group);
+                }
+            }
+        }
+        public void LoadCbbMaNV()
+        {
+            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
+            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
+            string tmp = "";
+            //cbbSoHoaDon.Items.Add("All");
+            foreach (XmlElement ele in list)
+            {
+                string group = ele.GetAttribute("class");
+                if (!tmp.Contains(group))
+                {
+                    tmp = tmp + "," + group;
+                    cbbSoHoaDon.Items.Add(group);
+                }
+            }
+        }
+        public void LoadCbbMaKH()
+        {
+            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
+            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
+            string tmp = "";
+            //cbbSoHoaDon.Items.Add("All");
+            foreach (XmlElement ele in list)
+            {
+                string group = ele.GetAttribute("class");
+                if (!tmp.Contains(group))
+                {
+                    tmp = tmp + "," + group;
+                    cbbSoHoaDon.Items.Add(group);
+                }
+            }
+        }
         public void LoadDuLieu()
         {
             SoHD = cbbSoHoaDon.SelectedItem.ToString();
@@ -37,9 +86,16 @@ namespace ShopPhone.GUI
             SDT = txtSDT.Text;
             NgayLap = dtpNgayLap.Value.ToString("yyyy-MM-dd");
         }
+
+        private void cbbSoHoaDon_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
             hienthiHoaDon();
+            LoadCbbSoHD(); 
         }
 
         private void btnThem_Click(object sender, EventArgs e)

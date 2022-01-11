@@ -20,4 +20,20 @@
       </xs:complexType>
     </xs:element>
   </xs:schema>
+  <_x0027_ChiTietHoaDon_x0027_>
+    <Id>1</Id>
+    <MaHang>H0001</MaHang>
+    <SoHoaDon>1</SoHoaDon>
+    <soluong>1</soluong>
+    <giaMua>6000000</giaMua>
+    <ngayDat>2022-01-08T00:00:00+07:00</ngayDat>
+  </_x0027_ChiTietHoaDon_x0027_>
+  <_x0027_ChiTietHoaDon_x0027_>
+    <Id>2</Id>
+    <MaHang>H0001</MaHang>
+    <SoHoaDon>2</SoHoaDon>
+    <soluong>3</soluong>
+    <giaMua>5500000</giaMua>
+    <ngayDat>2022-01-08T00:00:00+07:00</ngayDat>
+  </_x0027_ChiTietHoaDon_x0027_>
 </NewDataSet>

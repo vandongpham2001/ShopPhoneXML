@@ -402,5 +402,11 @@ namespace ShopPhone.GUI
             html.Save(pathHTML);
             Process.Start(pathHTML);
         }
+
+        private void hoáĐơnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmHoaDon frm = new frmHoaDon();
+            frm.ShowDialog();
+        }
     }
 }
