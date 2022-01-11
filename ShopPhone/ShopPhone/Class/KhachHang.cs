@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,6 +59,13 @@ namespace ShopPhone.Class
         public void xoaKH(string MaKhachHang)
         {
             Fxml.Xoa("KhachHang.xml", "KhachHang", "MaKhachHang", MaKhachHang);
+        }
+
+        public DataTable LoadMaKH()
+        {
+            DataTable dt = new DataTable();
+            dt = Fxml.HienThi("KhachHang.xml");
+            return dt;
         }
     }
 }

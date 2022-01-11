@@ -59,6 +59,13 @@ namespace ShopPhone.Class
         public void xoaNV(string MaNhanVien)
         {
             Fxml.Xoa("NhanVien.xml", "NhanVien", "MaNhanVien", MaNhanVien);
-        }       
+        }
+
+        public DataTable LoadMaNV()
+        {
+            DataTable dt = new DataTable();
+            dt = Fxml.HienThi("NhanVien.xml");
+            return dt;
+        }
     }
 }

@@ -231,5 +231,16 @@ namespace ShopPhone.Class
             MessageBox.Show(path + " not found!", "Information", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             return null;
         }   // end function
+
+        public DataTable XemChiTietHoaDonTheoSoHD(int SoHD)
+        {
+            SqlConnection conn = new SqlConnection(Conn);
+            conn.Open();
+            string sql = "Select * from ChiTietHoaDon where SoHoaDon= " + SoHD;
+            SqlDataAdapter ad = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable("ChiTietHoaDon");
+            return dt;
+
+        }
     }
 }

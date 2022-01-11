@@ -144,7 +144,5 @@ namespace ShopPhone.GUI
             txtSoLuong.Text = dgvHang.Rows[d].Cells[10].Value.ToString();
             cbbMaNCC.SelectedValue = dgvHang.Rows[d].Cells[11].Value.ToString();
         }
-        
-
     }
 }

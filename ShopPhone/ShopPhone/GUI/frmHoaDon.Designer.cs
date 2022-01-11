@@ -51,7 +51,9 @@ namespace ShopPhone.GUI
             this.btnSua = new System.Windows.Forms.Button();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.cbbSoHoaDon = new System.Windows.Forms.ComboBox();
+            this.dgvCTHD = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -95,7 +97,7 @@ namespace ShopPhone.GUI
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(100, 46);
             this.btnThanhToan.TabIndex = 31;
-            this.btnThanhToan.Text = "Thanh Toán";
+            this.btnThanhToan.Text = "Danh sách hoá đơn";
             this.btnThanhToan.UseVisualStyleBackColor = true;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
@@ -267,6 +269,19 @@ namespace ShopPhone.GUI
             this.cbbSoHoaDon.Size = new System.Drawing.Size(135, 24);
             this.cbbSoHoaDon.TabIndex = 36;
             this.cbbSoHoaDon.SelectedIndexChanged += new System.EventHandler(this.cbbSoHoaDon_SelectedIndexChanged);
+            this.cbbSoHoaDon.SelectedValueChanged += new System.EventHandler(this.cbbSoHoaDon_SelectedValueChanged);
+            // 
+            // dgvCTHD
+            // 
+            this.dgvCTHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCTHD.Location = new System.Drawing.Point(15, 295);
+            this.dgvCTHD.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvCTHD.Name = "dgvCTHD";
+            this.dgvCTHD.RowHeadersWidth = 51;
+            this.dgvCTHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCTHD.Size = new System.Drawing.Size(875, 201);
+            this.dgvCTHD.TabIndex = 34;
+            this.dgvCTHD.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHoaDon_CellContentClick);
             // 
             // frmHoaDon
             // 
@@ -277,6 +292,7 @@ namespace ShopPhone.GUI
             this.Controls.Add(this.cbbSoHoaDon);
             this.Controls.Add(this.cbbMaNhanVien);
             this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.dgvCTHD);
             this.Controls.Add(this.dgvHoaDon);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnSua);
@@ -299,6 +315,7 @@ namespace ShopPhone.GUI
             this.Text = "frmHoaDon";
             this.Load += new System.EventHandler(this.frmHoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,5 +345,6 @@ namespace ShopPhone.GUI
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.ComboBox cbbSoHoaDon;
+        private System.Windows.Forms.DataGridView dgvCTHD;
     }
 }

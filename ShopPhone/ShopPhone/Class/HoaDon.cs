@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -54,6 +55,13 @@ namespace ShopPhone.Class
                     "<ngayTao>" + today + "</ngayTao>";
 
             Fxml.Sua("HoaDon.xml", "_x0027_HoaDon_x0027_", "SoHoaDon", SoHoaDon.ToString(), noiDung);
+        }
+
+        public DataTable LoadSoHD()
+        {
+            DataTable dt = new DataTable();
+            dt = Fxml.HienThi("HoaDon.xml");
+            return dt;
         }
     }
 }

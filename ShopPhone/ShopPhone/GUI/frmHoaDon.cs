@@ -16,6 +16,9 @@ namespace ShopPhone.GUI
     {
         FileXml Fxml = new FileXml();
         HoaDon hd = new HoaDon();
+        KhachHang kh = new KhachHang();
+        NhanVien nv = new NhanVien();
+        ChiTietHoaDon cthd = new ChiTietHoaDon();
         string MaKhachHang, MaNhanVien, DiaChi, SDT, TrangThai, NgayLap, SoHD;
         public frmHoaDon()
         {
@@ -28,54 +31,6 @@ namespace ShopPhone.GUI
             dgvHoaDon.DataSource = dt;
 
         }
-        public void LoadCbbSoHD()
-        {
-            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
-            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
-            string tmp = "";
-            //cbbSoHoaDon.Items.Add("All");
-            foreach (XmlElement ele in list)
-            {
-                string group = ele.ToString();
-                if (!tmp.Contains(group))
-                {
-                    tmp = tmp + "," + group;
-                    cbbSoHoaDon.Items.Add(group);
-                }
-            }
-        }
-        public void LoadCbbMaNV()
-        {
-            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
-            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
-            string tmp = "";
-            //cbbSoHoaDon.Items.Add("All");
-            foreach (XmlElement ele in list)
-            {
-                string group = ele.GetAttribute("class");
-                if (!tmp.Contains(group))
-                {
-                    tmp = tmp + "," + group;
-                    cbbSoHoaDon.Items.Add(group);
-                }
-            }
-        }
-        public void LoadCbbMaKH()
-        {
-            XmlDocument xmlHD = Fxml.OpenXml("HoaDon.xml");
-            XmlNodeList list = xmlHD.GetElementsByTagName("SoHoaDon");
-            string tmp = "";
-            //cbbSoHoaDon.Items.Add("All");
-            foreach (XmlElement ele in list)
-            {
-                string group = ele.GetAttribute("class");
-                if (!tmp.Contains(group))
-                {
-                    tmp = tmp + "," + group;
-                    cbbSoHoaDon.Items.Add(group);
-                }
-            }
-        }
         public void LoadDuLieu()
         {
             SoHD = cbbSoHoaDon.SelectedItem.ToString();
@@ -87,15 +42,44 @@ namespace ShopPhone.GUI
             NgayLap = dtpNgayLap.Value.ToString("yyyy-MM-dd");
         }
 
+        private void cbbSoHoaDon_SelectedValueChanged(object sender, EventArgs e)
+        {
+            //string sohd = cbbSoHoaDon.SelectedValue.ToString();
+            //int sohd = Int32.Parse(cbbSoHoaDon.SelectedValue.ToString());
+            //int SoHD = sohd == 0 ? 1 : sohd;
+            //DataTable dt = Fxml.XemChiTietHoaDonTheoSoHD(SoHD);
+            //dgvHoaDon.DataSource = dt;
+        }
+
         private void cbbSoHoaDon_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            int SoHD = 1;
+            string sohd = cbbSoHoaDon.SelectedItem.ToString();
+            //int Sohd = Int32.Parse(cbbSoHoaDon.SelectedItem.ToString());
+            //if (Sohd == 0)
+            //{
+            //    SoHD = 1;
+            //}
+            dgvHoaDon.Visible = false;
+            dgvCTHD.Visible = true;
+            DataTable dt = new DataTable();
+            dt= Fxml.XemChiTietHoaDonTheoSoHD(SoHD);
+            dgvCTHD.DataSource = dt;
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)
         {
+            dgvCTHD.Visible = false;
             hienthiHoaDon();
-            LoadCbbSoHD(); 
+            cbbSoHoaDon.DataSource = hd.LoadSoHD();
+            cbbSoHoaDon.DisplayMember = "SoHoaDon";
+            cbbSoHoaDon.ValueMember = "SoHoaDon";
+            cbbMaKhachHang.DataSource = kh.LoadMaKH();
+            cbbMaKhachHang.DisplayMember = "TenKhachHang";
+            cbbMaKhachHang.ValueMember = "MaKhachHang";
+            cbbMaNhanVien.DataSource = nv.LoadMaNV();
+            cbbMaNhanVien.DisplayMember = "TenNhanVien";
+            cbbMaNhanVien.ValueMember = "MaNhanVien";
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -123,13 +107,13 @@ namespace ShopPhone.GUI
         private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int d = dgvHoaDon.CurrentRow.Index;
-            cbbMaKhachHang.SelectedItem = dgvHoaDon.Rows[d].Cells[1].Value.ToString();
-            cbbSoHoaDon.SelectedItem = dgvHoaDon.Rows[d].Cells[0].Value.ToString();
+            cbbMaKhachHang.SelectedValue = dgvHoaDon.Rows[d].Cells[1].Value.ToString();
+            cbbSoHoaDon.SelectedValue = dgvHoaDon.Rows[d].Cells[0].Value.ToString();
             txtSDT.Text = dgvHoaDon.Rows[d].Cells[4].Value.ToString();
             dtpNgayLap.Text = dgvHoaDon.Rows[d].Cells[6].Value.ToString();
             txtDiaChi.Text = dgvHoaDon.Rows[d].Cells[3].Value.ToString();
             txtTrangThai.Text = dgvHoaDon.Rows[d].Cells[5].Value.ToString();
-            cbbMaNhanVien.SelectedItem= dgvHoaDon.Rows[d].Cells[2].Value.ToString();
+            cbbMaNhanVien.SelectedValue= dgvHoaDon.Rows[d].Cells[2].Value.ToString();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -143,7 +127,9 @@ namespace ShopPhone.GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-
+            dgvCTHD.Visible = false;
+            dgvHoaDon.Visible = true;
+            hienthiHoaDon();
         }
     }
 }
