@@ -33,9 +33,9 @@ namespace ShopPhone.GUI
         }
         public void LoadDuLieu()
         {
-            SoHD = cbbSoHoaDon.SelectedItem.ToString();
-            MaKhachHang = cbbMaKhachHang.SelectedItem.ToString();
-            MaNhanVien = cbbMaNhanVien.SelectedItem.ToString();
+            SoHD = cbbSoHoaDon.SelectedValue.ToString();
+            MaKhachHang = cbbMaKhachHang.SelectedValue.ToString();
+            MaNhanVien = cbbMaNhanVien.SelectedValue.ToString();
             DiaChi = txtDiaChi.Text;
             TrangThai = txtTrangThai.Text;
             SDT = txtSDT.Text;
@@ -44,27 +44,34 @@ namespace ShopPhone.GUI
 
         private void cbbSoHoaDon_SelectedValueChanged(object sender, EventArgs e)
         {
-            //string sohd = cbbSoHoaDon.SelectedValue.ToString();
-            //int sohd = Int32.Parse(cbbSoHoaDon.SelectedValue.ToString());
-            //int SoHD = sohd == 0 ? 1 : sohd;
-            //DataTable dt = Fxml.XemChiTietHoaDonTheoSoHD(SoHD);
-            //dgvHoaDon.DataSource = dt;
+            //hienthiHoaDon();
+            ////string Sohd = cbbSoHoaDon.SelectedValue.ToString();
+            ////int sohd = Int32.Parse(Sohd);
+            //LoadDuLieu();
+            //int sohd = Int32.Parse(SoHD);
+            //if (sohd % 1==0)
+            //{
+            //    dgvHoaDon.Visible = false;
+            //    dgvCTHD.Visible = true;
+            //    DataTable dt = new DataTable();
+            //    dt = Fxml.XemChiTietHoaDonTheoSoHD(sohd);
+            //    dgvCTHD.DataSource = dt;
+            //}
         }
 
         private void cbbSoHoaDon_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int SoHD = 1;
-            string sohd = cbbSoHoaDon.SelectedItem.ToString();
-            //int Sohd = Int32.Parse(cbbSoHoaDon.SelectedItem.ToString());
-            //if (Sohd == 0)
+            //hienthiHoaDon();
+            //string sohd = cbbSoHoaDon.Text;
+            ////int Sohd = Int32.Parse(sohd);
+            //if (sohd != null)
             //{
-            //    SoHD = 1;
+            //    dgvHoaDon.Visible = false;
+            //    dgvCTHD.Visible = true;
+            //    DataTable dt = new DataTable();
+            //    dt = Fxml.XemChiTietHoaDonTheoSoHD(sohd);
+            //    dgvCTHD.DataSource = dt;
             //}
-            dgvHoaDon.Visible = false;
-            dgvCTHD.Visible = true;
-            DataTable dt = new DataTable();
-            dt= Fxml.XemChiTietHoaDonTheoSoHD(SoHD);
-            dgvCTHD.DataSource = dt;
         }
 
         private void frmHoaDon_Load(object sender, EventArgs e)

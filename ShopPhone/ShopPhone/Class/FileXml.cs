@@ -234,11 +234,13 @@ namespace ShopPhone.Class
 
         public DataTable XemChiTietHoaDonTheoSoHD(int SoHD)
         {
+            //int SoHD = Int32.Parse(sohd);
             SqlConnection conn = new SqlConnection(Conn);
             conn.Open();
             string sql = "Select * from ChiTietHoaDon where SoHoaDon= " + SoHD;
             SqlDataAdapter ad = new SqlDataAdapter(sql, conn);
             DataTable dt = new DataTable("ChiTietHoaDon");
+            ad.Fill(dt);
             return dt;
 
         }
